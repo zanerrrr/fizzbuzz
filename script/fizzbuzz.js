@@ -56,9 +56,9 @@ inputMin.addEventListener('keyup', function (e) {
     alert('Incorrect number!');
   }
   if (!(
-    (e.keyCode > 95 && e.keyCode < 106) ||
-    (e.keyCode > 47 && e.keyCode < 58) ||
-    [8, 13, 37, 39].indexOf(e.keyCode) >= 0
+    (e.keyCode > 95 && e.keyCode < 112) ||
+    (e.keyCode > 47 && e.keyCode < 58) || e.keyCode === 109
+    [8, 9, 13, 27, 37, 39].indexOf(e.keyCode) >= 0
   )) {
     return false;
   }
@@ -76,9 +76,9 @@ inputMax.addEventListener('keyup', function (e) {
     alert('Incorrect number!');
   }
   if (!(
-    (e.keyCode > 95 && e.keyCode < 106) ||
-    (e.keyCode > 47 && e.keyCode < 58) ||
-    [8, 13, 37, 39].indexOf(e.keyCode) >=0
+    (e.keyCode > 95 && e.keyCode < 112) ||
+    (e.keyCode > 47 && e.keyCode < 58) || e.keyCode === 109
+    [8, 9, 13, 27, 37, 39].indexOf(e.keyCode) >=0
   )) {
     return false;
   }
