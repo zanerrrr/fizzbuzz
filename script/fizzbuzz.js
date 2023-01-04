@@ -45,6 +45,8 @@ const create = function () {
 
 create();
 
+
+//this checks the values for minInput
 inputMin.addEventListener('keyup', function (e) {
   this.value = inputMin.value.replace(/^(0*)/, '');
   if (inputMin.value >= 1 && inputMin.value <= 100) {
@@ -56,15 +58,16 @@ inputMin.addEventListener('keyup', function (e) {
     alert('Incorrect number!');
   }
   if (!(
-    (e.keyCode > 95 && e.keyCode < 112) ||
-    (e.keyCode > 47 && e.keyCode < 58) || e.keyCode === 109
-    [8, 9, 13, 27, 37, 39].indexOf(e.keyCode) >= 0
+    (e.code > 95 && e.code < 112) ||
+    (e.code > 47 && e.code < 58) || e.code === 'NumpadSubtract'
+    ['Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) >= 0
   )) {
     return false;
   }
   create();
 });
 
+//this checks the values for maxInput
 inputMax.addEventListener('keyup', function (e) {
   this.value = inputMax.value.replace(/^(0*)/, '');
   if (inputMax.value >= 1 && inputMax.value <= 100) {
@@ -76,16 +79,16 @@ inputMax.addEventListener('keyup', function (e) {
     alert('Incorrect number!');
   }
   if (!(
-    (e.keyCode > 95 && e.keyCode < 112) ||
-    (e.keyCode > 47 && e.keyCode < 58) || e.keyCode === 109
-    [8, 9, 13, 27, 37, 39].indexOf(e.keyCode) >=0
-  )) {
+    (e.code > 95 && e.code < 112) ||
+    (e.code > 47 && e.code < 58) || e.code === 'NumpadSubtract'
+    ['Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) >= 0
+  )){
     return false;
   }
   create();
 });
 
-
+//this will create the reset and refresh button
 const reset = document.getElementById("reset-button");
 const refresh = document.getElementById("refresh-button");
 
@@ -101,6 +104,8 @@ refresh.onclick = function(){
   create();
 }
 
+//this will select fizz, buzz, fizzbuzz
+//for it to work click and unclick the button
 $('#fizz-button').click(function () {
   $('.other, .buzz, .fizzbuzz').toggle();
 });
