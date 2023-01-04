@@ -6,10 +6,10 @@ html {
 body {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    background-color: rgb(16, 195, 141);
+    background-color: rgb(152, 215, 196);
 }
 
-main h1{
+h1{
     text-align: center;
     font-size: 30px;
 }
@@ -22,6 +22,7 @@ main h1{
     flex-wrap: wrap;
     align-content: center;
     justify-items: center;
+    gap: 10px;
 }
 
 #container p {
@@ -40,7 +41,6 @@ main h1{
 
     .container-nav {
         width: 100%;
-        min-height: 400px;
         flex-wrap: wrap;
         flex-direction: column;
     }
@@ -90,7 +90,7 @@ main h1{
     background-color: aquamarine;
 }
 
-.fizz .red {
-    background-color: red;
-  }
+.fizz:hover, .buzz:hover, .fizzbuzz:hover, .other:hover{
+    box-shadow: 0 0 40px rgba(33,33,33,.8);
+}
   
