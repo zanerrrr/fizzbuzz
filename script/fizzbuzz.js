@@ -58,8 +58,9 @@ inputMin.addEventListener('keyup', function (e) {
     alert('Incorrect number!');
   }
   if (!(
-    (e.code > 95 && e.code < 112) ||
-    (e.code > 47 && e.code < 58) || e.code === 'NumpadSubtract'
+    (e.code >= 'Numpad0' && e.code <= 'Numpad9') ||
+    (e.code >= 'Digit0' && e.code <= 'Digit9') ||
+    e.code === 'NumpadSubtract'
     ['Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) >= 0
   )) {
     return false;
@@ -79,8 +80,9 @@ inputMax.addEventListener('keyup', function (e) {
     alert('Incorrect number!');
   }
   if (!(
-    (e.code > 95 && e.code < 112) ||
-    (e.code > 47 && e.code < 58) || e.code === 'NumpadSubtract'
+    (e.code >= 'Numpad0' && e.code <= 'Numpad9') ||
+    (e.code >= 'Digit0' && e.code <= 'Digit9') ||
+    e.code === 'NumpadSubtract'
     ['Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight'].indexOf(e.code) >= 0
   )){
     return false;
